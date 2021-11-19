@@ -7,6 +7,7 @@ from kivy.factory import Factory
 
 class Live(App, MDApp):
     KV_FILES = [
+        os.path.join(os.getcwd(), "Screens", "ManagerScreens", "manager_screens.kv"),
         os.path.join(os.getcwd(), "Screens", "LoginScreen", "login_screen.kv"),
         os.path.join(os.getcwd(), "Screens", "HomeScreen", "home_screen.kv"),
         os.path.join(os.getcwd(), "Screens", "HomeScreen", "Components", "cards.kv"),
@@ -15,6 +16,7 @@ class Live(App, MDApp):
     ]
 
     CLASSES = {
+        'ManagerScreens': "Screens.ManagerScreens.manager_screens",
         'LoginScreen': "Screens.LoginScreen.login_screen",
         'HomeScreen': "Screens.HomeScreen.home_screen",
         'Cards': "Screens.HomeScreen.Components.cards",
@@ -27,7 +29,7 @@ class Live(App, MDApp):
 
     def build_app(self):
         self.theme_cls.primary_palette = "Brown"
-        return Factory.HomeScreen()
+        return Factory.ManagerScreens()
 
 
 Live().run()

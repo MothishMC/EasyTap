@@ -1,9 +1,20 @@
+from kivy.properties import BooleanProperty
 from kivymd.uix.screen import MDScreen
 
 
 class HomeScreen(MDScreen):
     data = {
-        'Python': 'language-python',
-        'PHP': 'language-php',
-        'C++': 'language-cpp',
+        "Gallery": "folder-multiple-image",
+        "Camera": "camera"
     }
+
+    def callback(self, instance):
+        if instance.icon == "camera":
+            print("You pressed camera icon")
+        elif instance.icon == "folder-multiple-image":
+            print("You pressed gallery icon")
+        else:
+            print("")
+
+
+

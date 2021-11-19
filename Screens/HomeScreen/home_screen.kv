@@ -1,5 +1,6 @@
 #:import get_color_from_hex kivy.utils.get_color_from_hex
 <HomeScreen>
+    name: 'home'
     MDBoxLayout:
 
         md_bg_color: get_color_from_hex("#EFE6DB")
@@ -45,14 +46,9 @@
             source:"assets/images/pdf.png"
             text:"pdf here pdf6"
 
-    MDFloatingActionButton:
-        icon:"plus"
+    MDFloatingActionButtonSpeedDial:
+        data: root.data
+        root_button_anim: True
+        label_text_color: 1,1,1,1
         pos_hint:{"center_x":.88, "center_y":.08}
-
-    MDFloatingActionButton:
-        icon:"camera"
-        pos_hint:{"center_x":.88, "center_y":.18}
-
-    MDFloatingActionButton:
-        icon:"folder-multiple-image"
-        pos_hint:{"center_x":.88, "center_y":.28}
+        callback: root.callback
