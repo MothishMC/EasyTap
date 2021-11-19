@@ -1,0 +1,58 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+<HomeScreen>
+    MDBoxLayout:
+
+        md_bg_color: get_color_from_hex("#EFE6DB")
+
+        FitImage:
+            source: "assets/images/top.png"
+            size_hint_y: .1
+            pos_hint:{"top": 1}
+
+    MDLabel:
+        text: "Easy Tap"
+        font_style: "H4"
+        theme_text_color: "Custom"
+        text_color: get_color_from_hex("#FFF3E4")
+        pos_hint:{"center_y":.95}
+        x:"75dp"
+
+    MDGridLayout:
+        id: cards_box
+        cols:2
+        rows:3
+        spacing:"24dp"
+        padding:"24dp"
+        size_hint_y:None
+        height: root.height/1.2
+
+        Cards:
+            source:"assets/images/pdf.png"
+            text:"pdf here pdf1"
+        Cards:
+            source:"assets/images/pdf.png"
+            text:"pdf here pdf2"
+        Cards:
+            source:"assets/images/pdf.png"
+            text:"pdf here pdf3"
+        Cards:
+            source:"assets/images/pdf.png"
+            text:"pdf here pdf4"
+        Cards:
+            source:"assets/images/pdf.png"
+            text:"pdf here pdf5"
+        Cards:
+            source:"assets/images/pdf.png"
+            text:"pdf here pdf6"
+
+    MDFloatingActionButton:
+        icon:"plus"
+        pos_hint:{"center_x":.88, "center_y":.08}
+
+    MDFloatingActionButton:
+        icon:"camera"
+        pos_hint:{"center_x":.88, "center_y":.18}
+
+    MDFloatingActionButton:
+        icon:"folder-multiple-image"
+        pos_hint:{"center_x":.88, "center_y":.28}
