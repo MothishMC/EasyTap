@@ -10,7 +10,7 @@ class HomeScreen(MDScreen):
 
     def callback(self, instance):
         if instance.icon == "camera":
-            print("You pressed camera icon")
+            self.manager.current = 'cam'
         elif instance.icon == "folder-multiple-image":
             print("You pressed gallery icon")
         else:

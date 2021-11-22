@@ -1,9 +1,11 @@
 import os
 
 from kaki.app import App
+from kivy.uix.screenmanager import Screen
 from kivymd.app import MDApp
 from kivy.factory import Factory
 
+Screen
 
 class Live(App, MDApp):
     KV_FILES = [
